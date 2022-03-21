@@ -1,4 +1,4 @@
-IMG Tool é uma ferramenta que tem seu foco principal, de criar e modificar firmwares stock zip da Motorola ,`super.img`, `system.img`, `system_ext.img`, `product.img`, `vendor.img`, `oem.img`
+IMG Tool é uma ferramenta que tem seu foco principal voltado para criar e modificar `firmwares stock zip da Motorola`,`super.img`, `system.img`, `system_ext.img`, `product.img`, `vendor.img`, `oem.img`
 
 ### Instalação
 
