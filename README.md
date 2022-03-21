@@ -50,6 +50,13 @@ chmod a+x MAKE.sh
 
 Pronto! o IMG Tool, ja está pronto. só escolher a ferramenta, de acordo com seu gosto.
 
+### Agradecimentos:
+Ao [cryzuezin](https://github.com/CRYZUEZIN) que me forneceu muito conhecimento para utilizar com precisão os comandos de remake super partição automaticamente e a como utilizar o simg2img.
+Ao [menorziin](https://github.com/menorziin) que desenvolveu a ferramenta de extração de firmwares stock e que sempre me ajuda com partes de códigos que preciso.
+Ao [Samuel](https://t.me/s4muel007) Que mais do que qualquer pessoa me ajuda e me ensina códigos para ambiente linux, muitos deles estão presentes nessa ferramenta como os códigos que verificam se o arquivo existe antes de iniciar o processo.
+
+A todos vocês, meu agradecimento.
+
 ### Contato
 
 Quer falar alguma coisa? Precisa de alguma ajuda? [Contato](https://t.me/allexwin50)
