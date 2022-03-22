@@ -9,7 +9,7 @@ chmod a+x scripts/02.sh
 chmod a+x scripts/03.sh
 chmod a+x scripts/04.sh
 chmod a+x scripts/05.sh
-chmod a+x scripts/extractor.sh
+chmod a+x extractor.sh
 chmod a+x scripts/bloatwares_pe.sh
 chmod a+x scripts/bloatwares_pe_plus.sh
 chmod a+x scripts/bloatwares_stock_lite.sh
@@ -49,10 +49,11 @@ echo "#================================================================#"
 echo "#  [1] Extrair imagens a partir da Firmware Stock.zip            #"
 echo "#       Renomeie a stock ROM para stock.zip                      #"
 echo "#                       ------------------                       #"
-echo "#  [2] Extrair imagens a partir da super.img                     #"
+echo "#  [2] Converter super sparse para super.img                     #"
+echo "#  [3] Extrair imagens a partir da super.img                     #"
 echo "#                       ------------------                       #"
-echo "#  [3] Voltar para o menu principal                              #"
-echo "#  [4] Sair                                                      #"
+echo "#  [4] Voltar para o menu principal                              #"
+echo "#  [5] Sair                                                      #"
 echo "#================================================================#"
 echo "# Digite a opcao desejada:                                       #"
 echo "#================================================================#"
@@ -63,8 +64,9 @@ echo "#================================================================#"
 case "$x" in
 
 1) echo "Iniciando processo, aguarde..."; ./scripts/extract_stock_zip.sh && echo "Concluído!" ;;
-2) echo "Iniciando processo, aguarde..."; ./scripts/raw_super.sh && ./scripts/unpack_super.sh && echo "Concluído!" ;;
-3) clear && ./MAKE.sh ;;
-4) clear && echo "Saindo..." && clear; exit;;
+2) echo "Iniciando processo, aguarde..."; ./scripts/raw_super.sh && echo "Concluído!" ;;
+3) echo "Iniciando processo, aguarde..."; ./scripts/unpack_super.sh && echo "Concluído!" ;;
+4) clear && ./MAKE.sh ;;
+5) clear && echo "Saindo..." && clear; exit;;
 *) clear && echo "Opção inválida!"; esac done } && menu
 

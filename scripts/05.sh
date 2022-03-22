@@ -9,7 +9,7 @@ chmod a+x scripts/02.sh
 chmod a+x scripts/03.sh
 chmod a+x scripts/04.sh
 chmod a+x scripts/05.sh
-chmod a+x scripts/extractor.sh
+chmod a+x extractor.sh
 chmod a+x scripts/bloatwares_pe.sh
 chmod a+x scripts/bloatwares_pe_plus.sh
 chmod a+x scripts/bloatwares_stock_lite.sh

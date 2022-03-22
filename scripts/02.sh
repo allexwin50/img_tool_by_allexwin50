@@ -9,7 +9,7 @@ chmod a+x scripts/02.sh
 chmod a+x scripts/03.sh
 chmod a+x scripts/04.sh
 chmod a+x scripts/05.sh
-chmod a+x scripts/extractor.sh
+chmod a+x extractor.sh
 chmod a+x scripts/bloatwares_pe.sh
 chmod a+x scripts/bloatwares_pe_plus.sh
 chmod a+x scripts/bloatwares_stock_lite.sh
@@ -46,20 +46,22 @@ do
 echo "#================================================================#"
 echo "#                           = Menu =                             #"
 echo "#================================================================#"
-echo "#  [1] Recriar system.img -rw (Também serve para GSI)            #"
-echo "#  [2] Otimizar system.img                                       #"
+echo "#  [1] Converter system sparse para system.img                   #"
+echo "#  [2] Recriar system.img -rw (Também serve para GSI)            #"
+echo "#  [3] Otimizar system.img                                       #"
 echo "#                       ------------------                       #"
-echo "#  [3] Recriar system, product, vendor -rw                       #"
-echo "#  [4] Otimizar system, product, vendor                          #"
+echo "#  [4] Recriar system, product, vendor -rw                       #"
+echo "#  [5] Otimizar system, product, vendor                          #"
 echo "#                       ------------------                       #"
-echo "#  [5] Recriar system, system_ext, product, vendor -rw           #"
-echo "#  [6] Otimizar system, system_ext, product, vendor              #"
+echo "#  [6] Recriar system, system_ext, product, vendor -rw           #"
+echo "#  [7] Otimizar system, system_ext, product, vendor              #"
 echo "#                       ------------------                       #"
-echo "#  [7] Recriar oem -rw                                           #"
-echo "#  [8] Otimizar oem                                              #"
+echo "#  [8] Converter oem sparse para oem.img                         #"
+echo "#  [9] Recriar oem -rw                                           #"
+echo "#  [10] Otimizar oem                                             #"
 echo "#                       ------------------                       #"
-echo "#  [9] Voltar para o menu principal                              #"
-echo "#  [10] Sair                                                     #"
+echo "#  [11] Voltar para o menu principal                             #"
+echo "#  [12] Sair                                                     #"
 echo "#================================================================#"
 echo "# Digite a opcao desejada:                                       #"
 echo "#================================================================#"
@@ -69,22 +71,24 @@ echo "#================================================================#"
 
 case "$x" in
 
-1) echo "Iniciando processo, aguarde..."; ./scripts/raw_system.sh && ./scripts/create_system_gsi.sh && echo "Concluído!" ;;
-2) echo "Iniciando processo, aguarde..."; ./scripts/optimize_system.sh && echo "Concluído!" ;;
-3) [ ! -e "system_new.img" ] && echo "Esta faltando o arquivo system_new.img para que possamos prosseguir..." && menu
+1) echo "Iniciando processo, aguarde..."; ./scripts/raw_system.sh && echo "Concluído!" ;;
+2) echo "Iniciando processo, aguarde..."; ./scripts/create_system_gsi.sh && echo "Concluído!" ;;
+3) echo "Iniciando processo, aguarde..."; ./scripts/optimize_system.sh && echo "Concluído!" ;;
+4) [ ! -e "system_new.img" ] && echo "Esta faltando o arquivo system_new.img para que possamos prosseguir..." && menu
 [ ! -e "product_new.img" ] && echo "Esta faltando o arquivo product_new.img para que possamos prosseguir..." && menu
 [ ! -e "vendor_new.img" ] && echo "Esta faltando o arquivo vendor_new.img para que possamos prosseguir..." && menu
 echo "Iniciando processo, aguarde..."; ./scripts/create_system_new.sh && ./scripts/create_product_new.sh && ./scripts/create_vendor_new.sh && echo "Concluído!" ;;
-4) echo "Iniciando processo, aguarde..."; ./scripts/optimize_system.sh && ./scripts/optimize_product.sh && ./scripts/optimize_vendor.sh && echo "Concluído!" ;;
-5) [ ! -e "system_new.img" ] && echo "Esta faltando o arquivo system_new.img para que possamos prosseguir..." && menu
+5) echo "Iniciando processo, aguarde..."; ./scripts/optimize_system.sh && ./scripts/optimize_product.sh && ./scripts/optimize_vendor.sh && echo "Concluído!" ;;
+6) [ ! -e "system_new.img" ] && echo "Esta faltando o arquivo system_new.img para que possamos prosseguir..." && menu
 [ ! -e "system_ext_new.img" ] && echo "Esta faltando o arquivo system_ext_new.img para que possamos prosseguir..." && menu
 [ ! -e "product_new.img" ] && echo "Esta faltando o arquivo product_new.img para que possamos prosseguir..." && menu
 [ ! -e "vendor_new.img" ] && echo "Esta faltando o arquivo vendor_new.img para que possamos prosseguir..." && menu
 echo "Iniciando processo, aguarde..."; ./scripts/create_system_new.sh && ./scripts/create_system_ext_new.sh && ./scripts/create_product_new.sh && ./scripts/create_vendor_new.sh && echo "Concluído!" ;;
-6) echo "Iniciando processo, aguarde..."; ./scripts/optimize_system.sh && ./scripts/optimize_system_ext.sh && ./scripts/optimize_product.sh && ./scripts/optimize_vendor.sh && echo "Concluído!" ;;
-7) echo "Iniciando processo, aguarde..."; ./scripts/raw_oem.sh && ./scripts/create_oem_new.sh && echo "Concluído!" ;;
-8) echo "Iniciando processo, aguarde..."; ./scripts/optimize_oem.sh && echo "Concluído!" ;;
-9) clear && ./MAKE.sh ;;
-10) clear && echo "Saindo..." && clear; exit;;
+7) echo "Iniciando processo, aguarde..."; ./scripts/optimize_system.sh && ./scripts/optimize_system_ext.sh && ./scripts/optimize_product.sh && ./scripts/optimize_vendor.sh && echo "Concluído!" ;;
+8) echo "Iniciando processo, aguarde..."; ./scripts/raw_oem.sh && echo "Concluído!" ;;
+9) echo "Iniciando processo, aguarde..."; ./scripts/create_oem_new.sh && echo "Concluído!" ;;
+10) echo "Iniciando processo, aguarde..."; ./scripts/optimize_oem.sh && echo "Concluído!" ;;
+11) clear && ./MAKE.sh ;;
+12) clear && echo "Saindo..." && clear; exit;;
 *) clear && echo "Opção inválida!"; esac done } && menu
 
