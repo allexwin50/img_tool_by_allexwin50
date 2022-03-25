@@ -4,39 +4,6 @@ chmod a+x MAKE.sh
 chmod a+x lpmake
 chmod a+x lpunpack
 chmod a+x simg2img
-chmod a+x scripts/01.sh
-chmod a+x scripts/02.sh
-chmod a+x scripts/03.sh
-chmod a+x scripts/04.sh
-chmod a+x scripts/05.sh
-chmod a+x Firmware_extractor-master/extractor.sh
-chmod a+x scripts/bloatwares_pe.sh
-chmod a+x scripts/bloatwares_pe_plus.sh
-chmod a+x scripts/bloatwares_stock_lite.sh
-chmod a+x scripts/create_oem_new.sh
-chmod a+x scripts/create_product_gsi.sh
-chmod a+x scripts/create_product_new.sh
-chmod a+x scripts/create_system_ext_gsi.sh
-chmod a+x scripts/create_system_ext_new.sh
-chmod a+x scripts/create_system_gsi.sh
-chmod a+x scripts/create_system_new.sh
-chmod a+x scripts/create_vendor_new.sh
-chmod a+x scripts/extract_stock_zip.sh
-chmod a+x scripts/optimize_oem.sh
-chmod a+x scripts/optimize_product.sh
-chmod a+x scripts/optimize_system.sh
-chmod a+x scripts/optimize_system_ext.sh
-chmod a+x scripts/optimize_vendor.sh
-chmod a+x scripts/raw_oem.sh
-chmod a+x scripts/raw_super.sh
-chmod a+x scripts/raw_system.sh
-chmod a+x scripts/repack_super_ab.sh
-chmod a+x scripts/repack_super_ab_com_system_ext.sh
-chmod a+x scripts/repack_super_ab_to_a.sh
-chmod a+x scripts/repack_super_ab_to_a_com_system_ext.sh
-chmod a+x scripts/repack_super_ab_to_a_com_system_ext_gsi.sh
-chmod a+x scripts/repack_super_ab_to_a_gsi.sh
-chmod a+x scripts/unpack_super.sh
 
 x="teste"
 menu ()
@@ -54,7 +21,8 @@ echo "#  [2] Recriar imagens de sistema (system, system_ext, product e vendor) #
 echo "#  [3] Remover bloatwares                                                #"
 echo "#  [4] Montar e desmontar partições                                      #"
 echo "#  [5] Compilar super partição                                           #"
-echo "#  [6] Sair                                                              #"
+echo "#  [6] Limpar residuos ao concluir todo o processo                       #"
+echo "#  [7] Sair                                                              #"
 echo "#========================================================================#"
 echo "# Digite a opcao desejada:                                               #"
 echo "#========================================================================#"
@@ -64,11 +32,12 @@ echo "#========================================================================#
 
 case "$x" in
 
-1) clear && ./scripts/01.sh ;;
-2) clear && ./scripts/02.sh ;;
-3) clear && ./scripts/03.sh ;;
-4) clear && ./scripts/04.sh ;;
-5) clear && ./scripts/05.sh ;;
-6) clear && echo "Saindo..." && clear; exit;;
+1) clear && chmod a+x scripts/01.sh && ./scripts/01.sh ;;
+2) clear && chmod a+x scripts/02.sh && ./scripts/02.sh ;;
+3) clear && chmod a+x scripts/03.sh && ./scripts/03.sh ;;
+4) clear && chmod a+x scripts/04.sh && ./scripts/04.sh ;;
+5) clear && chmod a+x scripts/05.sh && ./scripts/05.sh ;;
+6) clear && chmod a+x scripts/clear.sh && ./scripts/clear.sh ;;
+7) clear && echo "Saindo..." && clear; exit;;
 *) clear && echo "Opção inválida!"; esac done } && menu
 

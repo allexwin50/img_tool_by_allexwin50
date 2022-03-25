@@ -11,5 +11,5 @@ vendor_=${vendor_#* }
 soma=$((system_ + product_ + vendor_))
 raw=`stat -c '%n %s' super.img`
 raw=${raw#* }
-./lpmake --metadata-size 65536 --super-name super --metadata-slots 2 --device super:$raw --group main:$soma --partition system_a:none:$system_:main --image system_a=./system_new.img --partition product_a:none:$product_:main --image product_a=./product_new.img --partition vendor_a:none:$vendor_:main --image vendor_a=./vendor_new.img --sparse --output ./super_new.img
+./lpmake --metadata-size 65536 --super-name super --metadata-slots 2 --device super:$raw --group main:$soma --partition system_a:readonly:$system_:main --image system_a=./system_new.img --partition product_a:readonly:$product_:main --image product_a=./product_new.img --partition vendor_a:readonly:$vendor_:main --image vendor_a=./vendor_new.img --sparse --output ./super_new.img
 
