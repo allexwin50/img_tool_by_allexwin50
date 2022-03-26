@@ -39,10 +39,10 @@ case "$x" in
 
 1) echo "Iniciando processo, aguarde..."; chmod a+x scripts/repack_super_ab.sh && ./scripts/repack_super_ab.sh && echo "Concluído!" ;;
 2) echo "Iniciando processo, aguarde..."; chmod a+x scripts/repack_super_ab_to_a.sh && ./scripts/repack_super_ab_to_a.sh && echo "Concluído!" ;;
-3) echo "Iniciando processo, aguarde..."; chmod a+x scripts/create_product_gsi.sh && ./scripts/create_product_gsi.sh; ./scripts/repack_super_ab_to_a_gsi.sh && echo "Concluído!" ;;
+3) echo "Iniciando processo, aguarde..."; chmod a+x scripts/create_product_gsi.sh && ./scripts/create_product_gsi.sh; chmod a+x scripts/repack_super_ab_to_a_gsi.sh; ./scripts/repack_super_ab_to_a_gsi.sh && echo "Concluído!" ;;
 4) echo "Iniciando processo, aguarde..."; chmod a+x scripts/repack_super_ab_com_system_ext.sh && ./scripts/repack_super_ab_com_system_ext.sh && echo "Concluído!" ;;
 5) echo "Iniciando processo, aguarde..."; chmod a+x scripts/repack_super_ab_to_a_com_system_ext.sh && ./scripts/repack_super_ab_to_a_com_system_ext.sh && echo "Concluído!" ;;
-6) echo "Iniciando processo, aguarde..."; chmod a+x scripts/create_product_gsi.sh && ./scripts/create_product_gsi.sh; ./scripts/create_system_ext_gsi.sh; ./scripts/repack_super_ab_to_a_com_system_ext_gsi.sh && echo "Concluído!" ;;
+6) echo "Iniciando processo, aguarde..."; chmod a+x scripts/create_product_gsi.sh && ./scripts/create_product_gsi.sh; chmod a+x scripts/create_system_ext_gsi.sh; ./scripts/create_system_ext_gsi.sh; chmod a+x scripts/repack_super_ab_to_a_com_system_ext_gsi.sh; ./scripts/repack_super_ab_to_a_com_system_ext_gsi.sh && echo "Concluído!" ;;
 7) clear && ./MAKE.sh ;;
 8) clear && echo "Saindo..." && clear; exit;;
 *) clear && echo "Opção inválida!"; esac done } && menu
