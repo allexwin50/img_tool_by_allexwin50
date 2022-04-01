@@ -3,16 +3,16 @@
 [ ! -e "product_new.img" ] && echo "Esta faltando o arquivo product_new.img para que possamos prosseguir..." && exit
 [ ! -e "mods.img" ] && echo "Esta faltando o arquivo mods.img para que possamos prosseguir..." && exit
 e2fsck -yf system_new.img
-fallocate -l 3000M system_new.img
-resize2fs system_new.img 3000M
+fallocate -l 2000M system_new.img
+resize2fs system_new.img 2000M
 e2fsck -yf system_new.img
 e2fsck -yf system_ext_new.img
-fallocate -l 2000M system_ext_new.img
-resize2fs system_ext_new.img 2000M
+fallocate -l 1G system_ext_new.img
+resize2fs system_ext_new.img 1G
 e2fsck -yf system_ext_new.img
 e2fsck -yf product_new.img
-fallocate -l 3000M product_new.img
-resize2fs product_new.img 3000M
+fallocate -l 4000M product_new.img
+resize2fs product_new.img 4000M
 e2fsck -yf product_new.img
 mkdir mods
 mkdir system_new
