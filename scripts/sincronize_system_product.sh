@@ -28,6 +28,8 @@ sudo umount system_new
 sudo rmdir system_new
 sudo umount product_new
 sudo rmdir product_new
+sudo umount vendor_new
+sudo rmdir vendor_new
 e2fsck -yf system_new.img
 e2fsck -yf product_new.img
 echo "Sincronização concluída"

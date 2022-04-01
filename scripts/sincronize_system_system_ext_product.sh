@@ -39,6 +39,8 @@ sudo umount system_ext_new
 sudo rmdir system_ext_new
 sudo umount product_new
 sudo rmdir product_new
+sudo umount vendor_new
+sudo rmdir vendor_new
 e2fsck -yf system_new.img
 e2fsck -yf system_ext_new.img
 e2fsck -yf product_new.img

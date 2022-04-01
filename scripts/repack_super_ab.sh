@@ -2,6 +2,14 @@
 [ ! -e "product_new.img" ] && echo "Esta faltando o arquivo product_new.img para que possamos prosseguir..." && exit
 [ ! -e "vendor_new.img" ] && echo "Esta faltando o arquivo vendor_new.img para que possamos prosseguir..." && exit
 [ ! -e "super.img" ] && echo "Esta faltando o arquivo super.img para que possamos prosseguir..." && exit
+sudo umount system_new
+sudo rmdir system_new
+sudo umount system_ext_new
+sudo rmdir system_ext_new
+sudo umount product_new
+sudo rmdir product_new
+sudo umount vendor_new
+sudo rmdir vendor_new
 system_=`stat -c '%n %s' system_new.img`
 system_=${system_#* }
 product_=`stat -c '%n %s' product_new.img`

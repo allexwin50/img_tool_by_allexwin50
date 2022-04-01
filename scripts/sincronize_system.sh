@@ -17,6 +17,8 @@ sudo umount mods
 sudo rmdir mods
 sudo umount system_new
 sudo rmdir system_new
+sudo umount vendor_new
+sudo rmdir vendor_new
 e2fsck -yf system_new.img
 echo "Sincronização concluída"
 
