@@ -34,13 +34,7 @@ sudo rmdir system_ext_new
 sudo umount product_new
 sudo rmdir product_new
 e2fsck -yf system_new.img
-resize2fs -M system_new.img
-e2fsck -yf system_new.img
 e2fsck -yf system_ext_new.img
-resize2fs -M system_ext_new.img
-e2fsck -yf system_ext_new.img
-e2fsck -yf product_new.img
-resize2fs -M product_new.img
 e2fsck -yf product_new.img
 echo "Sincronização concluída"
 
