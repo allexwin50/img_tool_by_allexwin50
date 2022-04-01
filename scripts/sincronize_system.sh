@@ -16,7 +16,5 @@ sudo rmdir mods
 sudo umount system_new
 sudo rmdir system_new
 e2fsck -yf system_new.img
-resize2fs -M system_new.img
-e2fsck -yf system_new.img
 echo "Sincronização concluída"
 
