@@ -1,5 +1,7 @@
 [ ! -e "system_new.img" ] && echo "Esta faltando o arquivo system_new.img para que possamos prosseguir..." && exit
 [ ! -e "mods.img" ] && echo "Esta faltando o arquivo mods.img para que possamos prosseguir..." && exit
+sudo umount system_new
+sudo rmdir system_new
 e2fsck -yf system_new.img
 fallocate -l 7000M system_new.img
 resize2fs system_new.img 7000M

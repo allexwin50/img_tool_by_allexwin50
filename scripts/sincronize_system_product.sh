@@ -1,6 +1,10 @@
 [ ! -e "system_new.img" ] && echo "Esta faltando o arquivo system_new.img para que possamos prosseguir..." && exit
 [ ! -e "product_new.img" ] && echo "Esta faltando o arquivo product_new.img para que possamos prosseguir..." && exit
 [ ! -e "mods.img" ] && echo "Esta faltando o arquivo mods.img para que possamos prosseguir..." && exit
+sudo umount system_new
+sudo rmdir system_new
+sudo umount product_new
+sudo rmdir product_new
 e2fsck -yf system_new.img
 fallocate -l 2000M system_new.img
 resize2fs system_new.img 2000M
