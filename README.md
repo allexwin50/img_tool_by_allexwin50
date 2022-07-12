@@ -57,6 +57,10 @@ Ao [Samuel](https://t.me/s4muel007) Que mais do que qualquer pessoa me ajuda e m
 
 A todos vocês, meu agradecimento.
 
+### Tutorial em vídeo de como utilizar a ferramenta abaixo!
+
+[LINK](https://youtu.be/nQpIE1K3lec)
+
 ### Contato
 
 Quer falar alguma coisa? Precisa de alguma ajuda? [Contato](https://t.me/allexwin50)
