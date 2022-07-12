@@ -11,8 +11,6 @@ chmod a+x scripts/03.sh
 chmod a+x scripts/04.sh
 chmod a+x scripts/05.sh
 chmod a+x scripts/06.sh
-chmod a+x scripts/bloatwares_pe_plus.sh
-chmod a+x scripts/bloatwares_pe.sh
 chmod a+x scripts/bloatwares_stock_lite.sh
 chmod a+x scripts/clear.sh
 chmod a+x scripts/create_oem_new.sh
