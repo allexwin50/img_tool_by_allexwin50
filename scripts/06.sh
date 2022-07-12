@@ -23,9 +23,9 @@ echo "#================================================================#"
 
 case "$x" in
 
-1) echo "Iniciando processo, aguarde..."; chmod a+x scripts/sincronize_system.sh && ./scripts/sincronize_system.sh && echo "Concluído!" ;;
-2) echo "Iniciando processo, aguarde..."; chmod a+x scripts/sincronize_system_product.sh && ./scripts/sincronize_system_product.sh  && echo "Concluído!" ;;
-3) echo "Iniciando processo, aguarde..."; chmod a+x scripts/sincronize_system_system_ext_product.sh && ./scripts/sincronize_system_system_ext_product.sh  && echo "Concluído!" ;;
+1) echo "Iniciando processo, aguarde..."; ./scripts/sincronize_system.sh && echo "Concluído!" ;;
+2) echo "Iniciando processo, aguarde..."; ./scripts/sincronize_system_product.sh  && echo "Concluído!" ;;
+3) echo "Iniciando processo, aguarde..."; ./scripts/sincronize_system_system_ext_product.sh  && echo "Concluído!" ;;
 4) clear && ./MAKE.sh ;;
 5) clear && echo "Saindo..." && clear; exit;;
 *) clear && echo "Opção inválida!"; esac done } && menu
