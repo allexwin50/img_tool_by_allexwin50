@@ -59,7 +59,7 @@ A todos vocês, meu agradecimento.
 
 ### Tutorial em vídeo de como utilizar a ferramenta abaixo!
 
-[LINK](https://youtu.be/nQpIE1K3lec)
+[LINK](https://youtu.be/S3vFcpKSMXk)
 
 ### Contato
 
