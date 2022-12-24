@@ -44,7 +44,7 @@ git clone https://github.com/allexwin50/img_tool_by_allexwin50.git
 Para iniciar o IMG Tool, execute dois passos no seu terminal:
 
 ```
-chmod a+x MAKE.sh
+chmod a+x *
 ./MAKE.sh
 ```
 
