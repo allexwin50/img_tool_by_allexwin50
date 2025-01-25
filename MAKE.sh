@@ -15,7 +15,7 @@ echo "#       Ferramenta de descriptografia de imagens android                 #
 echo "#       Feito por @allexwin50                                            #"
 echo "#========================================================================#"
 echo "#  [1] Extração de imagens (Stock ROMs ou super.img)                     #"
-echo "#  [2] Recriar imagens de sistema (system, system_ext, product e vendor) #"
+echo "#  [2] Recriar e otimizar imagens de sistema                             #"
 echo "#  [3] Remover bloatwares                                                #"
 echo "#  [4] Montar e desmontar partições                                      #"
 echo "#  [5] Compilar super partição                                           #"
