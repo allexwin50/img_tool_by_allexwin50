@@ -2,8 +2,8 @@
 cp img/product_zero.img ./
 mv product_zero.img product_new.img
 e2fsck -yf product_new.img
-fallocate -l 5000M product_new.img
-resize2fs product_new.img 5000M
+fallocate -l 3072M product_new.img
+resize2fs product_new.img 3072M
 e2fsck -yf product_new.img
 mkdir product
 mkdir product_new

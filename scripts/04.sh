@@ -24,8 +24,11 @@ echo "#                       ------------------                       #"
 echo "#  [9] Montar oem_new.img                                        #"
 echo "#  [10] Desmontar oem_new.img                                    #"
 echo "#                       ------------------                       #"
-echo "#  [11] Voltar para o menu principal                             #"
-echo "#  [12] Sair                                                     #"
+echo "#  [11] Montar odm_new.img                                       #"
+echo "#  [12] Desmontar odm_new.img                                    #"
+echo "#                       ------------------                       #"
+echo "#  [13] Voltar para o menu principal                             #"
+echo "#  [14] Sair                                                     #"
 echo "#================================================================#"
 echo "# Digite a opcao desejada:                                       #"
 echo "#================================================================#"
@@ -50,7 +53,10 @@ echo "Iniciando processo, aguarde..."; mkdir vendor_new; sudo mount -rw vendor_n
 9) [ ! -e "oem_new.img" ] && echo "Esta faltando o arquivo oem_new.img para que possamos prosseguir..." && menu
 echo "Iniciando processo, aguarde..."; mkdir oem_new; sudo mount -rw oem_new.img oem_new && echo "Concluído!" ;;
 10) echo "Iniciando processo, aguarde..."; umount oem_new && sudo rm -rf oem_new; echo "Concluído!" ;;
-11) clear && ./MAKE.sh ;;
-12) clear && echo "Saindo..." && clear; exit;;
+11) [ ! -e "odm_new.img" ] && echo "Esta faltando o arquivo odm_new.img para que possamos prosseguir..." && menu
+echo "Iniciando processo, aguarde..."; mkdir odm_new; sudo mount -rw odm_new.img odm_new && echo "Concluído!" ;;
+12) echo "Iniciando processo, aguarde..."; umount odm_new && sudo rm -rf odm_new; echo "Concluído!" ;;
+13) clear && ./MAKE.sh ;;
+14) clear && echo "Saindo..." && clear; exit;;
 *) clear && echo "Opção inválida!"; esac done } && menu
 

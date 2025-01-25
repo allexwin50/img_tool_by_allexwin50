@@ -2,8 +2,8 @@
 cp img/system_zero.img ./
 mv system_zero.img system_new.img
 e2fsck -yf system_new.img
-fallocate -l 2000M system_new.img
-resize2fs system_new.img 2000M
+fallocate -l 6144M system_new.img
+resize2fs system_new.img 6144M
 e2fsck -yf system_new.img
 mkdir system
 mkdir system_new

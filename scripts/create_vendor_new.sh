@@ -2,8 +2,8 @@
 cp img/vendor_zero.img ./
 mv vendor_zero.img vendor_new.img
 e2fsck -yf vendor_new.img
-fallocate -l 1G vendor_new.img
-resize2fs vendor_new.img 1G
+fallocate -l 1536M vendor_new.img
+resize2fs vendor_new.img 1536M
 e2fsck -yf vendor_new.img
 mkdir vendor
 mkdir vendor_new
