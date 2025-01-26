@@ -27,8 +27,14 @@ echo "#                       ------------------                       #"
 echo "#  [11] Montar odm_new.img                                       #"
 echo "#  [12] Desmontar odm_new.img                                    #"
 echo "#                       ------------------                       #"
-echo "#  [13] Voltar para o menu principal                             #"
-echo "#  [14] Sair                                                     #"
+echo "#  [13] Montar optics_new.img                                    #"
+echo "#  [14] Desmontar optics_new.img                                 #"
+echo "#                       ------------------                       #"
+echo "#  [15] Montar prism_new.img                                     #"
+echo "#  [16] Desmontar prism_new.img                                  #"
+echo "#                       ------------------                       #"
+echo "#  [17] Voltar para o menu principal                             #"
+echo "#  [18] Sair                                                     #"
 echo "#================================================================#"
 echo "# Digite a opcao desejada:                                       #"
 echo "#================================================================#"
@@ -56,7 +62,13 @@ echo "Iniciando processo, aguarde..."; mkdir oem_new; sudo mount -rw oem_new.img
 11) [ ! -e "odm_new.img" ] && echo "Esta faltando o arquivo odm_new.img para que possamos prosseguir..." && menu
 echo "Iniciando processo, aguarde..."; mkdir odm_new; sudo mount -rw odm_new.img odm_new && echo "Concluído!" ;;
 12) echo "Iniciando processo, aguarde..."; umount odm_new && sudo rm -rf odm_new; echo "Concluído!" ;;
-13) clear && ./MAKE.sh ;;
-14) clear && echo "Saindo..." && clear; exit;;
+13) [ ! -e "optics_new.img" ] && echo "Esta faltando o arquivo optics_new.img para que possamos prosseguir..." && menu
+echo "Iniciando processo, aguarde..."; mkdir optics_new; sudo mount -rw optics_new.img optics_new && echo "Concluído!" ;;
+14) echo "Iniciando processo, aguarde..."; umount optics_new && sudo rm -rf optics_new; echo "Concluído!" ;;
+15) [ ! -e "prism_new.img" ] && echo "Esta faltando o arquivo prism_new.img para que possamos prosseguir..." && menu
+echo "Iniciando processo, aguarde..."; mkdir prism_new; sudo mount -rw prism_new.img prism_new && echo "Concluído!" ;;
+16) echo "Iniciando processo, aguarde..."; umount prism_new && sudo rm -rf prism_new; echo "Concluído!" ;;
+17) clear && ./MAKE.sh ;;
+18) clear && echo "Saindo..." && clear; exit;;
 *) clear && echo "Opção inválida!"; esac done } && menu
 
