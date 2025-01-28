@@ -19,9 +19,9 @@ echo "#  [2] Recriar e otimizar imagens de sistema                             #
 echo "#  [3] Remover bloatwares                                                #"
 echo "#  [4] Montar e desmontar partições                                      #"
 echo "#  [5] Compilar super partição                                           #"
-#echo "#  [6] Sincronizar mods.img com a nova imagem                            #"
-echo "#  [6] Limpar residuos ao concluir todo o processo                       #"
-echo "#  [7] Sair                                                              #"
+echo "#  [6] Sincronizar mods.img com a nova imagem                            #"
+echo "#  [7] Limpar residuos ao concluir todo o processo                       #"
+echo "#  [8] Sair                                                              #"
 echo "#========================================================================#"
 echo "# Digite a opcao desejada:                                               #"
 echo "#========================================================================#"
@@ -36,8 +36,8 @@ case "$x" in
 3) clear && ./scripts/03.sh ;;
 4) clear && ./scripts/04.sh ;;
 5) clear && ./scripts/05.sh ;;
-#6) clear && chmod a+x scripts/06.sh && ./scripts/06.sh ;;
-6) clear && ./scripts/clear.sh ;;
-7) clear && echo "Saindo..." && clear; exit;;
+6) clear && chmod a+x scripts/06.sh && ./scripts/06.sh ;;
+7) clear && ./scripts/clear.sh ;;
+8) clear && echo "Saindo..." && clear; exit;;
 *) clear && echo "Opção inválida!"; esac done } && menu
 
