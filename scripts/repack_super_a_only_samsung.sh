@@ -22,5 +22,6 @@ vendor_=${vendor_#* }
 soma=$((system_ + odm_ + product_ + vendor_))
 raw=`stat -c '%n %s' super.img`
 raw=${raw#* }
-./lpmake --metadata-size 65536 --super-name super --metadata-slots 1 --device super:$raw --group main:$soma --partition system:readonly:$system_:main --image system=./system_new.img --partition odm:readonly:$odm_:main --image odm=./odm_new.img --partition product:readonly:$product_:main --image product=./product_new.img --partition vendor:readonly:$vendor_:main --image vendor=./vendor_new.img --sparse --output ./super_new.img
+./lpmake --metadata-size 65536 --super-name super --metadata-slots 1 --device super:$raw --group main:$soma --partition system:readonly:$system_:main --image system=./system_new.img --partition odm:readonly:$odm_:main --image odm=./odm_new.img --partition product:readonly:$product_:main --image product=./product_new.img --partition vendor:readonly:$vendor_:main --image vendor=./vendor_new.img --output ./super_new.img
+#./lpmake --metadata-size 65536 --super-name super --metadata-slots 1 --device super:$raw --group main:$soma --partition system:readonly:$system_:main --image system=./system_new.img --partition odm:readonly:$odm_:main --image odm=./odm_new.img --partition product:readonly:$product_:main --image product=./product_new.img --partition vendor:readonly:$vendor_:main --image vendor=./vendor_new.img --sparse --output ./super_new.img
 
