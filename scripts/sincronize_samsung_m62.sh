@@ -40,7 +40,6 @@ sudo mount -rw product_new.img product_new
 sudo mount -rw system_new.img system_new
 sudo mount -rw vendor_new.img vendor_new
 sudo cp -r --preserve=all mods/optics/* optics/
-#sudo cp -r --preserve=all mods/odm/* odm_new/
 sudo cp -r --preserve=all mods/product/* product_new/
 sudo cp -r --preserve=all mods/system/* system_new/system/
 sudo cp -r --preserve=all mods/only_m62_binary_7/framework/* system_new/system/framework
