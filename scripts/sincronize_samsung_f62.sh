@@ -42,7 +42,9 @@ sudo mount -rw vendor_new.img vendor_new
 sudo cp -r --preserve=all mods/optics/* optics/
 sudo cp -r --preserve=all mods/product/* product_new/
 sudo cp -r --preserve=all mods/system/* system_new/system/
-#sudo cp -r --preserve=all mods/only_f62_binary_7/framework/* system_new/system/framework
+sudo cp -r --preserve=all mods/only_f62_binary_7/framework/* system_new/system/framework
+sudo cp -r --preserve=all mods/only_f62_binary_7/floating_feature.xml system_new/system/etc
+sudo cp -r --preserve=all mods/only_f62_binary_7/floating_feature.xml vendor_new/etc
 sudo cp -r --preserve=all mods/vendor/* vendor_new/
 sudo cp -r --preserve=all mods/#placebo.img odm_new/
 sudo cp -r --preserve=all mods/#placebo2.img odm_new/

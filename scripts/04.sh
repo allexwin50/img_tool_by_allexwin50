@@ -33,8 +33,12 @@ echo "#                       ------------------                       #"
 echo "#  [15] Montar prism.img                                         #"
 echo "#  [16] Desmontar prism.img                                      #"
 echo "#                       ------------------                       #"
-echo "#  [17] Voltar para o menu principal                             #"
-echo "#  [18] Sair                                                     #"
+echo "#  [17] Montar mods.img somente leitura                          #"
+echo "#  [18] Montar mods.img                                          #"
+echo "#  [19] Desmontar mods.img                                       #"
+echo "#                       ------------------                       #"
+echo "#  [20] Voltar para o menu principal                             #"
+echo "#  [21] Sair                                                     #"
 echo "#================================================================#"
 echo "# Digite a opcao desejada:                                       #"
 echo "#================================================================#"
@@ -68,7 +72,12 @@ echo "Iniciando processo, aguarde..."; mkdir optics; sudo mount -rw optics.img o
 15) [ ! -e "prism.img" ] && echo "Esta faltando o arquivo prism.img para que possamos prosseguir..." && menu
 echo "Iniciando processo, aguarde..."; mkdir prism; sudo mount -rw prism.img prism && echo "Concluído!" ;;
 16) echo "Iniciando processo, aguarde..."; umount prism && sudo rm -rf prism; echo "Concluído!" ;;
-17) clear && ./MAKE.sh ;;
-18) clear && echo "Saindo..." && clear; exit;;
+17) [ ! -e "mods.img" ] && echo "Esta faltando o arquivo mods.img para que possamos prosseguir..." && menu
+echo "Iniciando processo, aguarde..."; mkdir mods; sudo mount -r mods.img mods && echo "Concluído!" ;;
+18) [ ! -e "mods.img" ] && echo "Esta faltando o arquivo mods.img para que possamos prosseguir..." && menu
+echo "Iniciando processo, aguarde..."; mkdir mods; sudo mount -rw mods.img mods && echo "Concluído!" ;;
+19) echo "Iniciando processo, aguarde..."; umount mods && sudo rm -rf mods; echo "Concluído!" ;;
+20) clear && ./MAKE.sh ;;
+21) clear && echo "Saindo..." && clear; exit;;
 *) clear && echo "Opção inválida!"; esac done } && menu
 
