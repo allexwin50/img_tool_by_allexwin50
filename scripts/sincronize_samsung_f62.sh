@@ -16,12 +16,12 @@ fallocate -l 1024M odm_new.img
 resize2fs odm_new.img 1024M
 e2fsck -yf odm_new.img
 e2fsck -yf product_new.img
-fallocate -l 5000M product_new.img
-resize2fs product_new.img 5000M
+fallocate -l 5120M product_new.img
+resize2fs product_new.img 5120M
 e2fsck -yf product_new.img
 e2fsck -yf system_new.img
-fallocate -l 7000M system_new.img
-resize2fs system_new.img 7000M
+fallocate -l 7168M system_new.img
+resize2fs system_new.img 7168M
 e2fsck -yf system_new.img
 e2fsck -yf vendor_new.img
 fallocate -l 2048M vendor_new.img

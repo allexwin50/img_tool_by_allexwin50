@@ -2,8 +2,8 @@
 cp img/odm_zero.img ./
 mv odm_zero.img odm_new.img
 e2fsck -yf odm_new.img
-fallocate -l 900M odm_new.img
-resize2fs odm_new.img 900M
+fallocate -l 1024M odm_new.img
+resize2fs odm_new.img 1024M
 e2fsck -yf odm_new.img
 mkdir odm
 mkdir odm_new
