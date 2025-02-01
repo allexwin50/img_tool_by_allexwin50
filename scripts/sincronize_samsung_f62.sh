@@ -42,10 +42,9 @@ sudo mount -rw vendor_new.img vendor_new
 sudo cp -r --preserve=all mods/optics/* optics/
 sudo cp -r --preserve=all mods/product/* product_new/
 sudo cp -r --preserve=all mods/system/* system_new/system/
-sudo cp -r --preserve=all mods/only_f62_binary_7/framework/* system_new/system/framework
-sudo cp -r --preserve=all mods/only_f62_binary_7/floating_feature.xml system_new/system/etc
-sudo cp -r --preserve=all mods/only_f62_binary_7/floating_feature.xml vendor_new/etc
-sudo cp -r --preserve=all mods/vendor/* vendor_new/
+sudo cp -r --preserve=all mods/only_f62_binary_7/product/* product_new/
+sudo cp -r --preserve=all mods/only_f62_binary_7//system/* system_new/system/
+sudo cp -r --preserve=all mods/only_f62_binary_7/vendor/* vendor_new/
 sudo cp -r --preserve=all mods/#placebo.img odm_new/
 sudo cp -r --preserve=all mods/#placebo2.img odm_new/
 sudo cp -r --preserve=all mods/#placebo.img product_new/
@@ -58,13 +57,9 @@ sudo rmdir mods
 sudo umount optics
 sudo rmdir optics
 sudo umount odm_new
-sudo rmdir odm_new
 sudo umount product_new
-sudo rmdir product_new
 sudo umount system_new
-sudo rmdir system_new
 sudo umount vendor_new
-sudo rmdir vendor_new
 e2fsck -yf odm_new.img
 resize2fs -M odm_new.img
 e2fsck -yf odm_new.img
@@ -77,5 +72,16 @@ e2fsck -yf system_new.img
 e2fsck -yf vendor_new.img
 resize2fs -M vendor_new.img
 e2fsck -yf vendor_new.img
+sudo mount -rw odm_new.img odm_new
+sudo mount -rw product_new.img product_new
+sudo mount -rw system_new.img system_new
+sudo mount -rw vendor_new.img vendor_new
+sudo find odm_new/ -name '#placebo.img' -exec rm -rf {} \;
+sudo find odm_new/ -name '#placebo2.img' -exec rm -rf {} \;
+sudo find product_new/ -name '#placebo.img' -exec rm -rf {} \;
+sudo find product_new/ -name '#placebo2.img' -exec rm -rf {} \;
+sudo find system_new/system/ -name '#placebo-x2.img' -exec rm -rf {} \;
+sudo find vendor_new/ -name '#placebo.img' -exec rm -rf {} \;
+sudo find vendor_new/ -name '#placebo2.img' -exec rm -rf {} \;
 echo "Sincronização concluída"
 
